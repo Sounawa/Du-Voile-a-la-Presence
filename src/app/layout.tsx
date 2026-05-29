@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display, Lora } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 
 const geistSans = Geist({
@@ -13,25 +14,44 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const lora = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "Du Voile à la Présence — Traité soufi de l'épreuve et de la blessure",
+  description:
+    "Une méditation inspirée par la tradition soufie sur le sens des épreuves, la pédagogie divine et le cœur brisé comme sanctuaire de l'Amour. Œuvre de partage offrant un nouveau regard sur les blessures.",
+  keywords: [
+    "soufisme",
+    "Tawhîd",
+    "Rûmî",
+    "Ibn Arabî",
+    "Hallâj",
+    "épreuve",
+    "blessure",
+    "guérison spirituelle",
+    "fanâ",
+    "cœur brisé",
+    "pédagogie divine",
+  ],
+  authors: [{ name: "Kâtib al-Qalb" }],
   icons: {
     icon: "https://z-cdn.chatglm.cn/z-ai/static/logo.svg",
   },
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "Du Voile à la Présence — Traité soufi de l'épreuve et de la blessure",
+    description:
+      "Quand la blessure devient porte de la Présence divine. Une méditation soufi sur l'épreuve et la guérison.",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
   },
 };
 
@@ -41,12 +61,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="fr" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} ${lora.variable} antialiased`}
       >
-        {children}
-        <Toaster />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange={false}
+        >
+          {children}
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   );

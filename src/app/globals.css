@@ -8,6 +8,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-playfair);
+  --font-body: var(--font-lora);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -37,80 +39,147 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dark: var(--gold-dark);
+  --color-ochre: var(--ochre);
+  --color-sufi-teal: var(--sufi-teal);
+  --color-sufi-navy: var(--sufi-navy);
+  --color-sufi-cream: var(--sufi-cream);
+  --color-sufi-warm: var(--sufi-warm);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
 
+/* ═══════════════════════════════════════════
+   SUFI THEME — Du Voile à la Présence
+   ═══════════════════════════════════════════ */
+
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Warm cream parchment background */
+  --background: #F5F0E8;
+  --foreground: #2C1810;
+
+  /* Cards slightly warmer than bg */
+  --card: #FDFBF7;
+  --card-foreground: #2C1810;
+  --popover: #FDFBF7;
+  --popover-foreground: #2C1810;
+
+  /* Deep navy for primary elements */
+  --primary: #1A3A4A;
+  --primary-foreground: #F5F0E8;
+
+  /* Warm sand secondary */
+  --secondary: #EDE5D8;
+  --secondary-foreground: #3D2B1F;
+
+  /* Muted elements */
+  --muted: #E8DFD0;
+  --muted-foreground: #8B7355;
+
+  /* Gold accent for highlights */
+  --accent: #F0E6D0;
+  --accent-foreground: #3D2B1F;
+  --destructive: #A85D3A;
+  --border: #D4C5A0;
+  --input: #D4C5A0;
+  --ring: #B8860B;
+
+  /* Sufi-specific colors */
+  --gold: #B8860B;
+  --gold-light: #D4A853;
+  --gold-dark: #8B6914;
+  --ochre: #C49A3C;
+  --sufi-teal: #1A3A4A;
+  --sufi-navy: #0F1E2E;
+  --sufi-cream: #F5F0E8;
+  --sufi-warm: #8B7355;
+
+  /* Charts */
+  --chart-1: #B8860B;
+  --chart-2: #1A3A4A;
+  --chart-3: #8B7355;
+  --chart-4: #D4A853;
+  --chart-5: #A85D3A;
+
+  /* Sidebar */
+  --sidebar: #FDFBF7;
+  --sidebar-foreground: #2C1810;
+  --sidebar-primary: #1A3A4A;
+  --sidebar-primary-foreground: #F5F0E8;
+  --sidebar-accent: #F0E6D0;
+  --sidebar-accent-foreground: #3D2B1F;
+  --sidebar-border: #D4C5A0;
+  --sidebar-ring: #B8860B;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  /* Deep night sky background */
+  --background: #0F1624;
+  --foreground: #F5F0E8;
+
+  /* Cards slightly lighter than bg */
+  --card: #162033;
+  --card-foreground: #F5F0E8;
+  --popover: #162033;
+  --popover-foreground: #F5F0E8;
+
+  /* Warm gold for primary */
+  --primary: #D4A853;
+  --primary-foreground: #0F1624;
+
+  /* Dark navy secondary */
+  --secondary: #1A2840;
+  --secondary-foreground: #E8DFD0;
+
+  /* Muted elements */
+  --muted: #1A2840;
+  --muted-foreground: #8B9DB5;
+
+  /* Gold accent */
+  --accent: #1E2D45;
+  --accent-foreground: #F5F0E8;
+  --destructive: #C85D3A;
+  --border: #2A3A52;
+  --input: #2A3A52;
+  --ring: #D4A853;
+
+  /* Sufi-specific colors (dark mode) */
+  --gold: #D4A853;
+  --gold-light: #E8C468;
+  --gold-dark: #B8860B;
+  --ochre: #C49A3C;
+  --sufi-teal: #2A4A5A;
+  --sufi-navy: #0A1220;
+  --sufi-cream: #E8DFD0;
+  --sufi-warm: #8B9DB5;
+
+  /* Charts */
+  --chart-1: #D4A853;
+  --chart-2: #2A4A5A;
+  --chart-3: #8B9DB5;
+  --chart-4: #E8C468;
+  --chart-5: #C85D3A;
+
+  /* Sidebar */
+  --sidebar: #162033;
+  --sidebar-foreground: #F5F0E8;
+  --sidebar-primary: #D4A853;
+  --sidebar-primary-foreground: #0F1624;
+  --sidebar-accent: #1E2D45;
+  --sidebar-accent-foreground: #F5F0E8;
+  --sidebar-border: #2A3A52;
+  --sidebar-ring: #D4A853;
 }
+
+/* ═══════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════ */
 
 @layer base {
   * {
@@ -118,5 +187,226 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-lora), Georgia, 'Times New Roman', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-playfair), 'Playfair Display', Georgia, serif;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+  }
+
+  /* Selection highlight */
+  ::selection {
+    background-color: oklch(0.8 0.15 80);
+    color: var(--foreground);
+  }
+}
+
+/* ═══════════════════════════════════════════
+   CUSTOM COMPONENTS
+   ═══════════════════════════════════════════ */
+
+/* Reading progress bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+  z-index: 100;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 8px oklch(0.7 0.15 80 / 0.5);
+}
+
+/* Ornamental section divider */
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 0;
+  opacity: 0.6;
+}
+.ornament-divider::before,
+.ornament-divider::after {
+  content: '';
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Bismillah-style centered text */
+.bismillah {
+  font-family: var(--font-playfair), serif;
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+  padding: 1.5rem 0;
+}
+
+/* Quote block with gold accent */
+.sufi-quote {
+  position: relative;
+  padding: 2rem 2.5rem;
+  margin: 2rem 0;
+  border-left: 3px solid var(--gold);
+  background: linear-gradient(135deg, oklch(0.97 0.02 80 / 0.3), transparent);
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  line-height: 1.8;
+}
+.sufi-quote::before {
+  content: '«';
+  position: absolute;
+  top: -0.25rem;
+  left: 0.75rem;
+  font-size: 3rem;
+  color: var(--gold);
+  opacity: 0.3;
+  font-style: normal;
+  font-family: var(--font-playfair), serif;
+}
+.sufi-quote .attribution {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gold-dark);
+  font-size: 0.875rem;
+}
+
+/* Section title decoration */
+.section-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--gold);
+  margin: 0.75rem auto 0;
+}
+
+/* Glow animation for decorative elements */
+@keyframes gentle-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+.gentle-glow {
+  animation: gentle-glow 4s ease-in-out infinite;
+}
+
+/* Fade in animation for sections */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtle pattern overlay */
+.pattern-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='%23B8860B' stroke-width='0.5'/%3E%3Cpath d='M30 10L50 30L30 50L10 30Z' fill='none' stroke='%23B8860B' stroke-width='0.3'/%3E%3C/svg%3E");
+  background-size: 60px 60px;
+}
+
+/* Sidebar navigation styling */
+.sufi-nav-link {
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+  padding-left: 1rem;
+}
+.sufi-nav-link:hover {
+  border-left-color: var(--gold);
+  color: var(--gold);
+}
+.sufi-nav-link.active {
+  border-left-color: var(--gold);
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* Hero section gradient */
+.hero-gradient {
+  background: linear-gradient(
+    180deg,
+    oklch(0.3 0.05 250) 0%,
+    oklch(0.25 0.04 260) 40%,
+    oklch(0.2 0.03 270) 70%,
+    oklch(0.15 0.02 280) 100%
+  );
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(
+    180deg,
+    oklch(0.12 0.04 250) 0%,
+    oklch(0.08 0.03 260) 40%,
+    oklch(0.06 0.02 270) 70%,
+    oklch(0.05 0.01 280) 100%
+  );
+}
+
+/* Anthology card */
+.anthology-card {
+  position: relative;
+  padding: 2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.anthology-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 20px oklch(0.6 0.15 80 / 0.15);
+  transform: translateY(-2px);
+}
+
+/* Star decoration */
+.star-decoration {
+  display: inline-block;
+  color: var(--gold);
+  opacity: 0.5;
+  font-size: 1.25rem;
+  letter-spacing: 0.5em;
+}
+
+/* Moon and star decorative element */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+.float-animation {
+  animation: float 6s ease-in-out infinite;
 }
