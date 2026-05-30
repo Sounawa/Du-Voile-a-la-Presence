@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
-  /* config options here */
+  output: "export",
+  basePath: "/Du-Voile-a-la-Presence",
+  images: {
+    unoptimized: true,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
